@@ -1,12 +1,8 @@
 import { IUser } from "../models/user";
 
-export interface IToken {
-  token: string;
-}
-
 export interface IHttpResponse {
   statusCode: number;
-  body: IUser | IUser[] | IToken;
+  body: IUser | IUser[] | string;
 }
 
 export interface IHttpRequest<B> {

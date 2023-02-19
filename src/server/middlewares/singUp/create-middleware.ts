@@ -3,7 +3,7 @@ import { ICreateUserParams } from "../../controllers/signUp/protocols";
 import { Bad_Request, Not_Found } from "../../helpers/types-errors";
 import { User } from "../../models/mongo-models/User";
 
-export const createMiddleware: RequestHandler = async (req, nes, next) => {
+export const createMiddleware: RequestHandler = async (req, _res, next) => {
   const { email, name, password } = req.body as ICreateUserParams;
 
   const validateFilds: (keyof ICreateUserParams)[] = [
