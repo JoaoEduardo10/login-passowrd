@@ -21,3 +21,5 @@ const User = model(
     },
   })
 );
+
+export { User };

@@ -1,9 +1,9 @@
 import { Router } from "express";
+import { createMiddleware } from "./middlewares/singUp/create-middleware";
+import { createRouter } from "./UseCases/create-user";
 
 const router = Router();
 
-router.get("/users", (req, res) => {
-  res.send("ok");
-});
+router.post("/users", createMiddleware, createRouter);
 
 export { router };
